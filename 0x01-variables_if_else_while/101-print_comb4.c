@@ -12,18 +12,21 @@ int main(void)
 
 	for (x = '0'; x <= '9'; x++)
 	{
-		for (y = x + '1'; y <= '9'; y++)
+		for (y = '0'; y <= '9'; y++)
 		{
-			for (z = y + '1'; z <= '9'; z++)
+			for (z = '0'; z <= '9'; z++)
 			{
-				putchar(x);
-				putchar(y);
-				putchar(z);
-
-				if (((x * 100) + (y * 10) + (z)) < 789)
+				if ((x < y) & (y < z) & (z <= '9'))
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(x);
+					putchar(y);
+					putchar(z);
+
+					if ((x + y + z) < 168)
+					{
+						putchar(',');
+						putchar(' ');
+				    }
 				}
 			}
 		}
