@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int x; /*first decimal*/
-	int y; /*second decimal*/
-	int z; /*third decimal*/
+	int x; /*first digit*/
+	int y; /*second digit*/
+	int z; /*third digit*/
 
 	for (x = '0'; x <= '9'; x++)
 	{
