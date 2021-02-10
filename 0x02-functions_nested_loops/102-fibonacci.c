@@ -15,7 +15,7 @@ int main(void)
 
 	for (count = 1; count <= 49; count++)
 	{
-		x + y = z;
+		z = x + y;
 		x = y;
 		y = z;
 		printf("%lu, ", z);
