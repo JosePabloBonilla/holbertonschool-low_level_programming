@@ -2,8 +2,10 @@
 
 /**
  * times_table - prints times table up to 9
+ *
  * Return: void
- */
+ *
+ **/
 
 void times_table(void)
 {
@@ -11,7 +13,7 @@ void times_table(void)
 
 	prod = 0;
 
-	for (y = 0; y <= 9; x++)
+	for (y = 0; y <= 9; y++)
 	{
 		for (x = 0; x <= 9; x++)
 		{
