@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * leet - convert string to leet speak
- * @c: string to convert
+ * leet - convert string to 1337 (leet)
+ * @str: string to be encoded
  * Return: string c
  */
 
