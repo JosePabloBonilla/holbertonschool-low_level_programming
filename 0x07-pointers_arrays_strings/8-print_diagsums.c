@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 
-/*
+/**
  * print_diagsums - print sum of diagonal values in a square array
  * @a: array of values
  * @size: size of array
