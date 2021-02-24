@@ -1,10 +1,11 @@
-#include "holberton.h"
 #include <stdio.h>
+#include "holberton.h"
 
 /**
  * main - print sum of all even fibonacci numbers under 4x10^6
- * Return - 0
+ * Return: 0
  */
+
 int main(void)
 {
 	unsigned long x, y, z, sum;
