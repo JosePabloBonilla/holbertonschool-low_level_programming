@@ -22,8 +22,7 @@ int change(int t)
 			t -= 2;
 		else if (t >= 1)
 			t -= 1;
-		else
-			c++;
+		c++;
 	}
 	return (c);
 }
