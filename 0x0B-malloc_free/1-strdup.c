@@ -16,7 +16,6 @@ int _strlen(char *s)
 	{
 		i++;
 	}
-	i++;
 	return (i);
 }
 
@@ -35,7 +34,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	str2 = (char *)malloc((_strlen(str)) * sizeof(char));
+	str2 = malloc((_strlen(str)) * sizeof(char) + 1);
 
 	if (str2 == NULL)
 		return (NULL);
