@@ -2,6 +2,24 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - swaps two values
+ * @s: string
+ * Return: 1 on success
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
  * _strdup - duplicates a string
  * @str: string to copy
  * Description - duplicate a string
@@ -10,18 +28,14 @@
 
 char *_strdup(char *str)
 {
-	int i, l;
+	int i;
 	char *str2;
-
-	l = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	while (str[l] != '\0')
-		l++;
+	str2 = (char *)malloc((_strlen(str)) * sizeof(char));
 
-	str2 = malloc(sizeof(*str) * 1 + 1);
 	if (str2 == NULL)
 		return (NULL);
 
