@@ -45,11 +45,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	l2 = _strlen(s2);
 
 	if (n >= l2)
-		l3 = l1 + l2 + 1;
+		n = l2;
 
 	else
 	{
-		l2 = n;
 		l3 = l1 + n + 1;
 	}
 
@@ -61,9 +60,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < l1; i++)
 		new[i] = s1[i];
 
-	for (j = 0; j < l2; j++)
+	for (j = 0; j < n; j++)
 		new[i + j] = s2[j];
 
-	new[i + j] = s2[j];
+	new[i + j] = '\0';
 	return (new);
 }
