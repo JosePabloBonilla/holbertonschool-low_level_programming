@@ -44,15 +44,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	l2 = _strlen(s2);
 
-	if (n > l2)
+	if (n >= l2)
 		n = l2;
 
 	else
 	{
-		l3 = l1 + n + 1;
+		l3 = l1 + n;
 	}
 
-	new = malloc(sizeof(l3));
+	new = malloc(sizeof(char) * l3 + 1);
 
 	if (new == NULL)
 		return (NULL);
