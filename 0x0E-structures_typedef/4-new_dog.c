@@ -2,12 +2,29 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - show string length
+ * @s: string
+ * Return: 1 on success
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
  * *_strcpy - copies string src to buffer pointed to by dest
  * @dest: string pointer
  * @src: buffer pointer
  * Return: dest pointer
  */
-
 char *_strcpy(char *dest, char *src)
 {
 	int i;
@@ -43,8 +60,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (newdog == NULL || name == NULL || owner == NULL)
 		return (NULL);
 
-	newname = malloc(sizeof(char) + 1);
-	newowner = malloc(sizeof(char) + 1);
+	newname = malloc(_strlen(name) + 1);
+	newowner = malloc(_strlen(owner) + 1);
 
 	if (newname == NULL || newowner == NULL)
 	{
