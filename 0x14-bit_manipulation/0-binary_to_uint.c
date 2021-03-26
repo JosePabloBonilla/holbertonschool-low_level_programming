@@ -32,7 +32,7 @@ int power(int base, int exponent)
 }
 
 /**
- * binary_to_unit - converts a binary number to an unsigned int
+ * binary_to_uint - converts a binary number to an unsigned int
  * @b: binary pointer
  * Return: unsigned int
  */
@@ -44,7 +44,7 @@ unsigned int binary_to_uint(const char *b)
 	sum = 0;
 	if (b == NULL)
 		return (0);
-	
+
 	len = _strlen(b);
 	for (i = len - 1; i >= 0; i--)
 	{
