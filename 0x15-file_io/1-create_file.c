@@ -8,7 +8,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int open_new, write_new, body = 0; /** body = content of file */
+	int open_new, write_new, body = 0; /** body = size of text_content */
 
 	if (filename == NULL)
 		return (-1);
