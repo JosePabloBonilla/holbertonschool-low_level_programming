@@ -9,49 +9,40 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t middle, left, right = 0;
-
 	if (!array)
 		return (-1);
-
-	right = size - 1;
-
-	while (left <= right)
-	{
-		middle = (left + right) / 2;
-		print_array(array, right, left);
-		if (array[middle] < value)
-		{
-			left = middle + 1;
-		}
-		else if (array[middle] > value)
-		{
-			right = middle - 1;
-		}
-		else
-		{
-			return (middle);
-		}
-	}
-	return (-1);
+	
+	return (print_array(array, size, 0, size - 1, value));
 }
 /**
  * print_array - print array
  * @array: pointer to first element of array
+ * @size: size of array
  * @left: left element
  * @right: right element
+ * @value: value searching for
+ * Return: The first index where value is located
  */
-void print_array(int *array, size_t right, size_t left)
+int print_array(int *array, size_t size, size_t left, size_t right, int value)
 {
-	printf("Searching in array:");
+	size_t i;
 
-	while (left <= right)
-	{
-		if (left == right)
-			printf(" %d", array[left]);
-		else
-			printf(" %d", array[left]);
-		left++;
-	}
-	printf("\n");
+	printf("Searching in array: %d", array[left]);
+	for (i = left + 1; i <= right; i++)
+		printf(", %d", array[i]);
+	putchar('\n');
+
+	if (left >= right)
+		return (-1);
+
+	if (value == array[(left + right) / 2])
+		return ((left + right) / 2);
+
+	if (value < array[(left + right) / 2])
+		return (print_array(array, size, left, ((left + right) / 2), value));
+
+	if (value > array[(left + right) / 2])
+		return (print_array(array, size, (left + right) / 2 + 1, right, value));
+
+	return (-1);
 }
